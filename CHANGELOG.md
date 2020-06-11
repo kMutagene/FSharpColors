@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0]
+### Added
+- Create and manipulat Colors using the `Colors` type and associated functions
+- DSL for all W3C conform color keywords such as `cyan`, `salmon`, etc
+
 ## [0.0.1]
 ### Added
 - Initial release
