@@ -1,0 +1,209 @@
+<html class="js csstransforms3d">
+  <head>
+    <meta charSet="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>
+      FSharpColors | Creating Colors
+    </title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://kMutagene.github.io/FSharpColors/static/images/favicon.png"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/nucleus.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/fontawesome-all.min.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/hybrid.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/featherlight.min.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/perfect-scrollbar.min.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/auto-complete.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/atom-one-dark-reasonable.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/theme.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/tips.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/atom-one-dark.min.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/theme-blue.css"/>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <nav id="sidebar">
+      <div id="header-wrapper">
+        <div id="header">
+          <h2 id="logo">
+            FSharpColors
+          </h2>
+        </div>
+        <div class="searchbox">
+          <label for="search-by">
+            <i class="fas fa-search"></i>
+          </label>
+          <input data-search-input="" id="search-by" type="search" placeholder="Search..."/>
+          <span data-search-clear="">
+            <i class="fas fa-times"></i>
+          </span>
+        </div>
+        <script type="text/javascript" src="https://kMutagene.github.io/FSharpColors/static/js/lunr.min.js"></script>
+        <script type="text/javascript" src="https://kMutagene.github.io/FSharpColors/static/js/auto-complete.js"></script>
+        <script type="text/javascript">
+          var baseurl ='https://kMutagene.github.io/FSharpColors'
+        </script>
+        <script type="text/javascript" src="https://kMutagene.github.io/FSharpColors/static/js/search.js"></script>
+      </div>
+      <div class="highlightable">
+        <ul class="topics">
+          <li id="menu-explanations" class="dd-item menu-group-link">
+            <a>
+              Explanation
+            </a>
+          </li>
+          <li id="menu-tutorials" class="dd-item menu-group-link">
+            <a>
+              Tutorials
+            </a>
+          </li>
+          <li id="menu-howtos" class="dd-item menu-group-link menu-group-link-active">
+            <a>
+              How-To Guides
+            </a>
+          </li>
+          <li id="menu-refs" class="dd-item menu-group-link">
+            <a>
+              API References
+            </a>
+          </li>
+        </ul>
+        <ul id="submenu-explanations" class="submenu">
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/explanations/overview.html" class="padding">
+              FSharpColors Overview
+            </a>
+          </li>
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/explanations/some-post.html" class="padding">
+              Some Explanation
+            </a>
+          </li>
+        </ul>
+        <ul id="submenu-tutorials" class="submenu">
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/tutorials/how-to-start.html" class="padding">
+              Getting started
+            </a>
+          </li>
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/tutorials/some-post.html" class="padding">
+              Some Post
+            </a>
+          </li>
+        </ul>
+        <ul id="submenu-howtos" class="submenu submenu-active">
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/how-tos/createColors.html" class="active-link padding">
+              Creating Colors
+            </a>
+          </li>
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/how-tos/script.html" class="padding">
+              Sample sample
+            </a>
+          </li>
+        </ul>
+        <ul id="submenu-refs" class="submenu">
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/reference/FSharpColors/index.html" class="padding">
+              FSharpColors
+            </a>
+          </li>
+        </ul>
+        <section id="shortcuts">
+          <h3>
+            Shortucts
+          </h3>
+          <ul>
+            <li>
+              <a class="padding" href="/">
+                <i class="fas fa-home"></i>
+                Home
+              </a>
+            </li>
+            <li>
+              <a class="padding" href="https://github.com/kMutagene/FSharpColors">
+                <i class="fab fa-github"></i>
+                GitHub repo
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section id="footer">
+          <p>Built with <a href="https://github.com/ionide/Fornax">Fornax</a>
+        </section>
+      </div>
+    </nav>
+    <section id="body">
+      <div id="overlay"></div>
+      <div class="padding highlightable">
+        <div id="body-inner">
+          <span id="sidebar-toggle-span">
+            <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+              <i class="fas fa-bars"></i>
+               navigation
+            </a>
+          </span>
+          <h2>Creating colors from input</h2>
+<p>FSharpColors supports parsing both raw color values and string representations (often found on the web) of them</p>
+<h3>(a)rgb</h3>
+<pre class="fssnip highlighted"><code class="language-fsharp"><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="hljs-type">Color</span><span class="hljs-keyword">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="hljs-function">fromARGB</span> <span class="hljs-number">100</span> <span class="hljs-number">100</span> <span class="hljs-number">100</span> <span class="hljs-number">100</span>
+<span onmouseout="hideTip(event, 'fs2', 4)" onmouseover="showTip(event, 'fs2', 4)" class="hljs-type">Color</span><span class="hljs-keyword">.</span><span onmouseout="hideTip(event, 'fs4', 5)" onmouseover="showTip(event, 'fs4', 5)" class="hljs-function">fromARGBString</span> <span class="hljs-string">&quot;argb(100,100,100,100)&quot;</span>
+
+<span onmouseout="hideTip(event, 'fs2', 6)" onmouseover="showTip(event, 'fs2', 6)" class="hljs-type">Color</span><span class="hljs-keyword">.</span><span onmouseout="hideTip(event, 'fs5', 7)" onmouseover="showTip(event, 'fs5', 7)" class="hljs-function">fromRGB</span> <span class="hljs-number">100</span> <span class="hljs-number">100</span> <span class="hljs-number">100</span>
+<span onmouseout="hideTip(event, 'fs2', 8)" onmouseover="showTip(event, 'fs2', 8)" class="hljs-type">Color</span><span class="hljs-keyword">.</span><span onmouseout="hideTip(event, 'fs6', 9)" onmouseover="showTip(event, 'fs6', 9)" class="hljs-function">fromRGBString</span> <span class="hljs-string">&quot;rgb(100,100,100)&quot;</span>
+</code></pre>
+<h3>cmyk</h3>
+<pre class="fssnip highlighted"><code class="language-fsharp"><span onmouseout="hideTip(event, 'fs2', 10)" onmouseover="showTip(event, 'fs2', 10)" class="hljs-type">Color</span><span class="hljs-keyword">.</span><span onmouseout="hideTip(event, 'fs7', 11)" onmouseover="showTip(event, 'fs7', 11)" class="hljs-function">fromCMYK</span> <span class="hljs-number">0.</span> <span class="hljs-number">0.</span> <span class="hljs-number">0.</span> <span class="hljs-number">0.60</span>
+<span onmouseout="hideTip(event, 'fs2', 12)" onmouseover="showTip(event, 'fs2', 12)" class="hljs-type">Color</span><span class="hljs-keyword">.</span><span onmouseout="hideTip(event, 'fs8', 13)" onmouseover="showTip(event, 'fs8', 13)" class="hljs-function">fromCMYKString</span> <span class="hljs-string">&quot;cmyk(0%,0%,0%,60%)&quot;</span>
+</code></pre>
+<h3>Hex</h3>
+<pre class="fssnip highlighted"><code class="language-fsharp"><span class="hljs-comment">//for hex strings, parsing both with and without the prefix is supported</span>
+<span onmouseout="hideTip(event, 'fs2', 14)" onmouseover="showTip(event, 'fs2', 14)" class="hljs-type">Color</span><span class="hljs-keyword">.</span><span onmouseout="hideTip(event, 'fs9', 15)" onmouseover="showTip(event, 'fs9', 15)" class="hljs-function">fromHexString</span> <span class="hljs-string">&quot;FFFFFF&quot;</span>
+<span onmouseout="hideTip(event, 'fs2', 16)" onmouseover="showTip(event, 'fs2', 16)" class="hljs-type">Color</span><span class="hljs-keyword">.</span><span onmouseout="hideTip(event, 'fs9', 17)" onmouseover="showTip(event, 'fs9', 17)" class="hljs-function">fromHexString</span> <span class="hljs-string">&quot;0xFFFFFF&quot;</span>
+</code></pre>
+<h3>Webcolors</h3>
+<pre class="fssnip highlighted"><code class="language-fsharp"><span onmouseout="hideTip(event, 'fs2', 18)" onmouseover="showTip(event, 'fs2', 18)" class="hljs-type">Color</span><span class="hljs-keyword">.</span><span onmouseout="hideTip(event, 'fs10', 19)" onmouseover="showTip(event, 'fs10', 19)" class="hljs-function">fromWebColorString</span> <span class="hljs-string">&quot;#FFFFFF&quot;</span>
+<span onmouseout="hideTip(event, 'fs2', 20)" onmouseover="showTip(event, 'fs2', 20)" class="hljs-type">Color</span><span class="hljs-keyword">.</span><span onmouseout="hideTip(event, 'fs11', 21)" onmouseover="showTip(event, 'fs11', 21)" class="hljs-function">fromStandardWebColor</span> <span onmouseout="hideTip(event, 'fs12', 22)" onmouseover="showTip(event, 'fs12', 22)" class="hljs-type">StandardWebColor</span><span class="hljs-keyword">.</span><span onmouseout="hideTip(event, 'fs13', 23)" onmouseover="showTip(event, 'fs13', 23)" class="hljs-function">AntiqueWhite</span>
+</code></pre>
+<div class="tip" id="fs1">namespace FSharpColors</div>
+<div class="tip" id="fs2">type Color =<br />&#160;&#160;{ A: byte<br />&#160;&#160;&#160;&#160;R: byte<br />&#160;&#160;&#160;&#160;G: byte<br />&#160;&#160;&#160;&#160;B: byte }<br />&#160;&#160;&#160;&#160;static member fromARGB : a:int -&gt; r:int -&gt; g:int -&gt; b:int -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromARGBString : argbString:string -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromCMYK : c:float -&gt; m:float -&gt; y:float -&gt; k:float -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromCMYKString : cmykString:string -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromColorKeyword : keyWord:string -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromHexString : s:string -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromRGB : r:int -&gt; g:int -&gt; b:int -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromRGBString : rgbString:string -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromStandardWebColor : swc:StandardWebColor -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromWebColorString : s:string -&gt; Color<br />&#160;&#160;&#160;&#160;...</div>
+<div class="tip" id="fs3">static member Color.fromARGB : a:int -&gt; r:int -&gt; g:int -&gt; b:int -&gt; Color</div>
+<div class="tip" id="fs4">static member Color.fromARGBString : argbString:string -&gt; Color</div>
+<div class="tip" id="fs5">static member Color.fromRGB : r:int -&gt; g:int -&gt; b:int -&gt; Color</div>
+<div class="tip" id="fs6">static member Color.fromRGBString : rgbString:string -&gt; Color</div>
+<div class="tip" id="fs7">static member Color.fromCMYK : c:float -&gt; m:float -&gt; y:float -&gt; k:float -&gt; Color</div>
+<div class="tip" id="fs8">static member Color.fromCMYKString : cmykString:string -&gt; Color</div>
+<div class="tip" id="fs9">static member Color.fromHexString : s:string -&gt; Color</div>
+<div class="tip" id="fs10">static member Color.fromWebColorString : s:string -&gt; Color</div>
+<div class="tip" id="fs11">static member Color.fromStandardWebColor : swc:StandardWebColor -&gt; Color</div>
+<div class="tip" id="fs12">type StandardWebColor =<br />&#160;&#160;| AliceBlue<br />&#160;&#160;| AntiqueWhite<br />&#160;&#160;| Aqua<br />&#160;&#160;| Aquamarine<br />&#160;&#160;| Azure<br />&#160;&#160;| Beige<br />&#160;&#160;| Bisque<br />&#160;&#160;| Black<br />&#160;&#160;| BlanchedAlmond<br />&#160;&#160;| Blue<br />&#160;&#160;...<br />&#160;&#160;&#160;&#160;static member ofKeyWord : (string -&gt; StandardWebColor)<br />&#160;&#160;&#160;&#160;static member toRGB : (StandardWebColor -&gt; int * int * int)<br />&#160;&#160;&#160;&#160;static member ofRGB : r:int -&gt; g:int -&gt; b:int -&gt; StandardWebColor</div>
+<div class="tip" id="fs13">union case StandardWebColor.AntiqueWhite: StandardWebColor</div>
+
+
+        </div>
+      </div>
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/clipboard.min.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/perfect-scrollbar.min.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/jquery.sticky.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/featherlight.min.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/modernizr.custom-3.6.0.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/learn.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/hugo-learn.js"></script>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/mermaid/mermaid.css"/>
+    <script src="https://kMutagene.github.io/FSharpColors/static/mermaid/mermaid.js"></script>
+    <script>
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/languages/fsharp.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/tips.js"></script>
+  </body>
+</html>

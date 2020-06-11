@@ -1,0 +1,727 @@
+<html class="js csstransforms3d">
+  <head>
+    <meta charSet="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>
+      FSharpColors | Color
+    </title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://kMutagene.github.io/FSharpColors/static/images/favicon.png"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/nucleus.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/fontawesome-all.min.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/hybrid.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/featherlight.min.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/perfect-scrollbar.min.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/auto-complete.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/atom-one-dark-reasonable.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/theme.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/tips.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/atom-one-dark.min.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/theme-blue.css"/>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <nav id="sidebar">
+      <div id="header-wrapper">
+        <div id="header">
+          <h2 id="logo">
+            FSharpColors
+          </h2>
+        </div>
+        <div class="searchbox">
+          <label for="search-by">
+            <i class="fas fa-search"></i>
+          </label>
+          <input data-search-input="" id="search-by" type="search" placeholder="Search..."/>
+          <span data-search-clear="">
+            <i class="fas fa-times"></i>
+          </span>
+        </div>
+        <script type="text/javascript" src="https://kMutagene.github.io/FSharpColors/static/js/lunr.min.js"></script>
+        <script type="text/javascript" src="https://kMutagene.github.io/FSharpColors/static/js/auto-complete.js"></script>
+        <script type="text/javascript">
+          var baseurl ='https://kMutagene.github.io/FSharpColors'
+        </script>
+        <script type="text/javascript" src="https://kMutagene.github.io/FSharpColors/static/js/search.js"></script>
+      </div>
+      <div class="highlightable">
+        <ul class="topics">
+          <li id="menu-explanations" class="dd-item menu-group-link">
+            <a>
+              Explanation
+            </a>
+          </li>
+          <li id="menu-tutorials" class="dd-item menu-group-link">
+            <a>
+              Tutorials
+            </a>
+          </li>
+          <li id="menu-howtos" class="dd-item menu-group-link">
+            <a>
+              How-To Guides
+            </a>
+          </li>
+          <li id="menu-refs" class="dd-item menu-group-link menu-group-link-active">
+            <a>
+              API References
+            </a>
+          </li>
+        </ul>
+        <ul id="submenu-explanations" class="submenu">
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/explanations/overview.html" class="padding">
+              FSharpColors Overview
+            </a>
+          </li>
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/explanations/some-post.html" class="padding">
+              Some Explanation
+            </a>
+          </li>
+        </ul>
+        <ul id="submenu-tutorials" class="submenu">
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/tutorials/how-to-start.html" class="padding">
+              Getting started
+            </a>
+          </li>
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/tutorials/some-post.html" class="padding">
+              Some Post
+            </a>
+          </li>
+        </ul>
+        <ul id="submenu-howtos" class="submenu">
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/how-tos/createColors.html" class="padding">
+              Creating Colors
+            </a>
+          </li>
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/how-tos/script.html" class="padding">
+              Sample sample
+            </a>
+          </li>
+        </ul>
+        <ul id="submenu-refs" class="submenu submenu-active">
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/reference/FSharpColors/index.html" class="padding">
+              FSharpColors
+            </a>
+          </li>
+        </ul>
+        <section id="shortcuts">
+          <h3>
+            Shortucts
+          </h3>
+          <ul>
+            <li>
+              <a class="padding" href="/">
+                <i class="fas fa-home"></i>
+                Home
+              </a>
+            </li>
+            <li>
+              <a class="padding" href="https://github.com/kMutagene/FSharpColors">
+                <i class="fab fa-github"></i>
+                GitHub repo
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section id="footer">
+          <p>Built with <a href="https://github.com/ionide/Fornax">Fornax</a>
+        </section>
+      </div>
+    </nav>
+    <section id="body">
+      <div id="overlay"></div>
+      <div class="padding highlightable">
+        <div id="body-inner">
+          <span id="sidebar-toggle-span">
+            <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+              <i class="fas fa-bars"></i>
+               navigation
+            </a>
+          </span>
+          <div class="api-page">
+            <h2>
+              Color
+            </h2>
+            <b>
+              Namespace: 
+            </b>
+            <a href="FSharpColors.html">
+              FSharpColors
+            </a>
+            <br/>
+            <b>
+              Parent: 
+            </b>
+            <a href="FSharpColors.html">
+              FSharpColors
+            </a>
+            <span>
+              <p>Color structure</p>
+
+
+            </span>
+            <br/>
+            <table>
+              <tr>
+                <th width="35%">
+                  Name
+                </th>
+                <th width="65%">
+                  Description
+                </th>
+              </tr>
+              <tr>
+                <td colSpan="3">
+                  <b>
+                    Record Fields
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    A
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  byte
+                  <br/>
+                </td>
+                <td>
+                  <p>The alpha component value of this Color structure.</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    R
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  byte
+                  <br/>
+                </td>
+                <td>
+                  <p>The red component value of this Color structure.</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    G
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  byte
+                  <br/>
+                </td>
+                <td>
+                  <p>The green component value of this Color structure.</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    B
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  byte
+                  <br/>
+                </td>
+                <td>
+                  <p>The blue component value of this Color structure.</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td colSpan="3">
+                  <b>
+                    Static Members
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    fromARGB
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  a:int -> r:int -> g:int -> b:int -> Color
+                  <br/>
+                </td>
+                <td>
+                  <p>Creates a Color structure from the four ARGB component (alpha, red, green, and blue) values.</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    fromARGBString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  argbString:string -> Color
+                  <br/>
+                </td>
+                <td>
+                  <p>Creates a Color structure from the specified argb encoding string (e.g. "argb(255,255,255,255)").</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    fromCMYK
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:float -> m:float -> y:float -> k:float -> Color
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    fromCMYKString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  cmykString:string -> Color
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    fromColorKeyword
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  keyWord:string -> Color
+                  <br/>
+                </td>
+                <td>
+                  <p>Creates a Color structure from the given W3C conform standard web color keyword .</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    fromHexString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  s:string -> Color
+                  <br/>
+                </td>
+                <td>
+                  <p>Gets color from hex representataion (FFFFFF) or (0xFFFFFF)</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    fromRGB
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  r:int -> g:int -> b:int -> Color
+                  <br/>
+                </td>
+                <td>
+                  <p>Creates a Color structure from the specified color values (red, green, and blue).
+The alpha value is implicitly 255 (fully opaque).</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    fromRGBString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  rgbString:string -> Color
+                  <br/>
+                </td>
+                <td>
+                  <p>Creates a Color structure from the specified argb encoding string (e.g. "argb(255,255,255,255)").</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    fromStandardWebColor
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  swc:StandardWebColor -> Color
+                  <br/>
+                </td>
+                <td>
+                  <p>Creates a Color structure from the given W3C conform standard web color type.</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    fromWebColorString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  s:string -> Color
+                  <br/>
+                </td>
+                <td>
+                  <p>Gets color from web color (#FFFFFF)</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    getHue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:Color -> float
+                  <br/>
+                </td>
+                <td>
+                  <p>Gets the hue-saturation-brightness (HSB) hue value, in degrees, for this Color structure.</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    getMaxRGB
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:Color -> ColorComponent
+                  <br/>
+                </td>
+                <td>
+                  <p>Returns the highest color component of the given color</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    getMinRGB
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:Color -> ColorComponent
+                  <br/>
+                </td>
+                <td>
+                  <p>Returns the lowest color component of the given color</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    getSaturation
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  col:Color -> float
+                  <br/>
+                </td>
+                <td>
+                  <p>Gets the hue-saturation-brightness (HSB) saturation value for this Color structure.</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    toARGB
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:Color -> int * int * int * int
+                  <br/>
+                </td>
+                <td>
+                  <p>Gets the 32-bit ARGB value of this Color structure.</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    toARGBString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:Color -> string
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    toCMYK
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:Color -> float<MeasureOne> * float<MeasureOne> * float<MeasureOne> * float<MeasureOne>
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    toCMYKString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:Color -> string
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    toHexString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  prefix:bool -> c:Color -> string
+                  <br/>
+                </td>
+                <td>
+                  <p>Gets the hex representataion (FFFFFF) of a color (with valid prefix "0xFFFFFF")</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    toRGB
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:Color -> int * int * int
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    toRGBString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:Color -> string
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    toString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:Color -> string
+                  <br/>
+                </td>
+                <td>
+                  <p>Converts this Color structure to a human-readable string.</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    toWebColorString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:Color -> string
+                  <br/>
+                </td>
+                <td>
+                  <p>Gets the web color representataion (#FFFFFF)</p>
+
+
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/clipboard.min.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/perfect-scrollbar.min.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/jquery.sticky.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/featherlight.min.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/modernizr.custom-3.6.0.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/learn.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/hugo-learn.js"></script>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/mermaid/mermaid.css"/>
+    <script src="https://kMutagene.github.io/FSharpColors/static/mermaid/mermaid.js"></script>
+    <script>
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/languages/fsharp.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/tips.js"></script>
+  </body>
+</html>

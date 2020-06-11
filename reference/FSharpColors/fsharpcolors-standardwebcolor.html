@@ -1,0 +1,2920 @@
+<html class="js csstransforms3d">
+  <head>
+    <meta charSet="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>
+      FSharpColors | StandardWebColor
+    </title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://kMutagene.github.io/FSharpColors/static/images/favicon.png"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/nucleus.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/fontawesome-all.min.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/hybrid.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/featherlight.min.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/perfect-scrollbar.min.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/auto-complete.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/atom-one-dark-reasonable.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/theme.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/tips.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/atom-one-dark.min.css"/>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/css/theme-blue.css"/>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <nav id="sidebar">
+      <div id="header-wrapper">
+        <div id="header">
+          <h2 id="logo">
+            FSharpColors
+          </h2>
+        </div>
+        <div class="searchbox">
+          <label for="search-by">
+            <i class="fas fa-search"></i>
+          </label>
+          <input data-search-input="" id="search-by" type="search" placeholder="Search..."/>
+          <span data-search-clear="">
+            <i class="fas fa-times"></i>
+          </span>
+        </div>
+        <script type="text/javascript" src="https://kMutagene.github.io/FSharpColors/static/js/lunr.min.js"></script>
+        <script type="text/javascript" src="https://kMutagene.github.io/FSharpColors/static/js/auto-complete.js"></script>
+        <script type="text/javascript">
+          var baseurl ='https://kMutagene.github.io/FSharpColors'
+        </script>
+        <script type="text/javascript" src="https://kMutagene.github.io/FSharpColors/static/js/search.js"></script>
+      </div>
+      <div class="highlightable">
+        <ul class="topics">
+          <li id="menu-explanations" class="dd-item menu-group-link">
+            <a>
+              Explanation
+            </a>
+          </li>
+          <li id="menu-tutorials" class="dd-item menu-group-link">
+            <a>
+              Tutorials
+            </a>
+          </li>
+          <li id="menu-howtos" class="dd-item menu-group-link">
+            <a>
+              How-To Guides
+            </a>
+          </li>
+          <li id="menu-refs" class="dd-item menu-group-link menu-group-link-active">
+            <a>
+              API References
+            </a>
+          </li>
+        </ul>
+        <ul id="submenu-explanations" class="submenu">
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/explanations/overview.html" class="padding">
+              FSharpColors Overview
+            </a>
+          </li>
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/explanations/some-post.html" class="padding">
+              Some Explanation
+            </a>
+          </li>
+        </ul>
+        <ul id="submenu-tutorials" class="submenu">
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/tutorials/how-to-start.html" class="padding">
+              Getting started
+            </a>
+          </li>
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/tutorials/some-post.html" class="padding">
+              Some Post
+            </a>
+          </li>
+        </ul>
+        <ul id="submenu-howtos" class="submenu">
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/how-tos/createColors.html" class="padding">
+              Creating Colors
+            </a>
+          </li>
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/how-tos/script.html" class="padding">
+              Sample sample
+            </a>
+          </li>
+        </ul>
+        <ul id="submenu-refs" class="submenu submenu-active">
+          <li>
+            <a href="https://kMutagene.github.io/FSharpColors/reference/FSharpColors/index.html" class="padding">
+              FSharpColors
+            </a>
+          </li>
+        </ul>
+        <section id="shortcuts">
+          <h3>
+            Shortucts
+          </h3>
+          <ul>
+            <li>
+              <a class="padding" href="/">
+                <i class="fas fa-home"></i>
+                Home
+              </a>
+            </li>
+            <li>
+              <a class="padding" href="https://github.com/kMutagene/FSharpColors">
+                <i class="fab fa-github"></i>
+                GitHub repo
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section id="footer">
+          <p>Built with <a href="https://github.com/ionide/Fornax">Fornax</a>
+        </section>
+      </div>
+    </nav>
+    <section id="body">
+      <div id="overlay"></div>
+      <div class="padding highlightable">
+        <div id="body-inner">
+          <span id="sidebar-toggle-span">
+            <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+              <i class="fas fa-bars"></i>
+               navigation
+            </a>
+          </span>
+          <div class="api-page">
+            <h2>
+              StandardWebColor
+            </h2>
+            <b>
+              Namespace: 
+            </b>
+            <a href="FSharpColors.html">
+              FSharpColors
+            </a>
+            <br/>
+            <b>
+              Parent: 
+            </b>
+            <a href="FSharpColors.html">
+              FSharpColors
+            </a>
+            <span>
+              <p>W3C Recognized color keyword names</p>
+
+
+            </span>
+            <br/>
+            <table>
+              <tr>
+                <th width="35%">
+                  Name
+                </th>
+                <th width="65%">
+                  Description
+                </th>
+              </tr>
+              <tr>
+                <td colSpan="3">
+                  <b>
+                    Static Members
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    ofRGB
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  r:int -> g:int -> b:int -> StandardWebColor
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    toRGB
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  StandardWebColor -> int * int * int
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    ofKeyWord
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  string -> StandardWebColor
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td colSpan="3">
+                  <b>
+                    Union Cases
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    AliceBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    AntiqueWhite
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Aqua
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Aquamarine
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Azure
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Beige
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Bisque
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Black
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    BlanchedAlmond
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Blue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Blueviolet
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Brown
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    BurlyWood
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    CadetBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Chartreuse
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Chocolate
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Coral
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    CornflowerBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    CornSilk
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Crimson
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Cyan
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkCyan
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkGoldenRod
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkGray
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkGreen
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkGrey
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkKhaki
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkMagenta
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Darkolivegreen
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkOrange
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkOrchid
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkRed
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkSalmon
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkSeaGreen
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkSlateBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkSlateGray
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkSlateGrey
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkTurquoise
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DarkViolet
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DeepPink
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DeepSkyBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DimGray
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DimGrey
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    DodgerBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    FireBrick
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    FloralWhite
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    ForestGreen
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Fuchsia
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Gainsboro
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    GhostWhite
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Gold
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    GoldenRod
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Gray
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Grey
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Green
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    GreenYellow
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Honeydew
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Hotpink
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    IndianRed
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Indigo
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Ivory
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Khaki
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Lavender
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LavenderBlush
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LawnGreen
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LemonChiffon
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LightBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LightCoral
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LightCyan
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LightGoldenRodYellow
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LightGray
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LightGreen
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LightGrey
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LightPink
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LightAalmon
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LightAeaGreen
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LightAkyBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LightAlateGray
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LightslateGrey
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LightSteelBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    LightYellow
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Lime
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Limegreen
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Linen
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Magenta
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Maroon
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    MediumAquamarine
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    MediumBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    MediumOrchid
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    MediumPurple
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    MediumSeaGreen
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    MediumSlateBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    MediumSpringGreen
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    MediumTurquoise
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    MediumVioletRed
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    MidnightBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    MintCream
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    MistyRose
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Moccasin
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    NavajoWhite
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Navy
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    OldLace
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Olive
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    OliveDrab
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Orange
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    OrangeRed
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Orchid
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    PaleGoldenRod
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    PaleGreen
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    PaleTurquoise
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    PaleVioletRed
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    PapayaWhip
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    PeachPuff
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Peru
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Pink
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Plum
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    PowderBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Purple
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Red
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    RosyBrown
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    RoyalBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    SaddleBrown
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Salmon
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    SandyBrown
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    SeaGreen
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    SeaShell
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Sienna
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Silver
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Skyblue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    SlateBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    SlateGray
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    SlateGrey
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Snow
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    SpringGreen
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    SteelBlue
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Tan
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Teal
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Thistle
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Tomato
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Turquoise
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Violet
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Wheat
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    White
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    WhiteSmoke
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    Yellow
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    YellowGreen
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/clipboard.min.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/perfect-scrollbar.min.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/jquery.sticky.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/featherlight.min.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/modernizr.custom-3.6.0.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/learn.js"></script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/hugo-learn.js"></script>
+    <link rel="stylesheet" href="https://kMutagene.github.io/FSharpColors/static/mermaid/mermaid.css"/>
+    <script src="https://kMutagene.github.io/FSharpColors/static/mermaid/mermaid.js"></script>
+    <script>
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/languages/fsharp.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://kMutagene.github.io/FSharpColors/static/js/tips.js"></script>
+  </body>
+</html>
