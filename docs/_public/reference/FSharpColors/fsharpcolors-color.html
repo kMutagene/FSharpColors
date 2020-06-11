@@ -92,11 +92,6 @@
         </ul>
         <ul id="submenu-howtos" class="submenu">
           <li>
-            <a href="http://localhost:8080//how-tos/somePostWithCode.html" class="padding">
-              Some post with Code
-            </a>
-          </li>
-          <li>
             <a href="http://localhost:8080//how-tos/createColors.html" class="padding">
               Creating Colors
             </a>
@@ -104,11 +99,6 @@
           <li>
             <a href="http://localhost:8080//how-tos/script.html" class="padding">
               Sample sample
-            </a>
-          </li>
-          <li>
-            <a href="http://localhost:8080//how-tos/diagrams.html" class="padding">
-              Diagrams
             </a>
           </li>
         </ul>
@@ -278,7 +268,7 @@
               <tr>
                 <td>
                   <code>
-                    fromArgb
+                    fromARGB
                   </code>
                   <br/>
                   <br/>
@@ -297,7 +287,81 @@
               <tr>
                 <td>
                   <code>
-                    fromHex
+                    fromARGBString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  argbString:string -> Color
+                  <br/>
+                </td>
+                <td>
+                  <p>Creates a Color structure from the specified argb encoding string (e.g. "argb(255,255,255,255)").</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    fromCMYK
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:float -> m:float -> y:float -> k:float -> Color
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    fromCMYKString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  cmykString:string -> Color
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    fromColorKeyword
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  keyWord:string -> Color
+                  <br/>
+                </td>
+                <td>
+                  <p>Creates a Color structure from the given W3C conform standard web color keyword .</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    fromHexString
                   </code>
                   <br/>
                   <br/>
@@ -316,7 +380,7 @@
               <tr>
                 <td>
                   <code>
-                    fromRgb
+                    fromRGB
                   </code>
                   <br/>
                   <br/>
@@ -336,7 +400,45 @@ The alpha value is implicitly 255 (fully opaque).</p>
               <tr>
                 <td>
                   <code>
-                    fromWebColor
+                    fromRGBString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  rgbString:string -> Color
+                  <br/>
+                </td>
+                <td>
+                  <p>Creates a Color structure from the specified argb encoding string (e.g. "argb(255,255,255,255)").</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    fromStandardWebColor
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  swc:StandardWebColor -> Color
+                  <br/>
+                </td>
+                <td>
+                  <p>Creates a Color structure from the given W3C conform standard web color type.</p>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    fromWebColorString
                   </code>
                   <br/>
                   <br/>
@@ -385,7 +487,8 @@ The alpha value is implicitly 255 (fully opaque).</p>
                   <br/>
                 </td>
                 <td>
-                  
+                  <p>Returns the highest color component of the given color</p>
+
 
                 </td>
               </tr>
@@ -403,7 +506,8 @@ The alpha value is implicitly 255 (fully opaque).</p>
                   <br/>
                 </td>
                 <td>
-                  
+                  <p>Returns the lowest color component of the given color</p>
+
 
                 </td>
               </tr>
@@ -429,7 +533,7 @@ The alpha value is implicitly 255 (fully opaque).</p>
               <tr>
                 <td>
                   <code>
-                    toArgb
+                    toARGB
                   </code>
                   <br/>
                   <br/>
@@ -448,7 +552,61 @@ The alpha value is implicitly 255 (fully opaque).</p>
               <tr>
                 <td>
                   <code>
-                    toHex
+                    toARGBString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:Color -> string
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    toCMYK
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:Color -> float<MeasureOne> * float<MeasureOne> * float<MeasureOne> * float<MeasureOne>
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    toCMYKString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:Color -> string
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    toHexString
                   </code>
                   <br/>
                   <br/>
@@ -461,6 +619,42 @@ The alpha value is implicitly 255 (fully opaque).</p>
                 <td>
                   <p>Gets the hex representataion (FFFFFF) of a color (with valid prefix "0xFFFFFF")</p>
 
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    toRGB
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:Color -> int * int * int
+                  <br/>
+                </td>
+                <td>
+                  
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>
+                    toRGBString
+                  </code>
+                  <br/>
+                  <br/>
+                  <b>
+                    Signature: 
+                  </b>
+                  c:Color -> string
+                  <br/>
+                </td>
+                <td>
+                  
 
                 </td>
               </tr>
@@ -486,7 +680,7 @@ The alpha value is implicitly 255 (fully opaque).</p>
               <tr>
                 <td>
                   <code>
-                    toWebColor
+                    toWebColorString
                   </code>
                   <br/>
                   <br/>

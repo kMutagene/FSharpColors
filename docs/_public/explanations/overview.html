@@ -92,11 +92,6 @@
         </ul>
         <ul id="submenu-howtos" class="submenu">
           <li>
-            <a href="http://localhost:8080//how-tos/somePostWithCode.html" class="padding">
-              Some post with Code
-            </a>
-          </li>
-          <li>
             <a href="http://localhost:8080//how-tos/createColors.html" class="padding">
               Creating Colors
             </a>
@@ -104,11 +99,6 @@
           <li>
             <a href="http://localhost:8080//how-tos/script.html" class="padding">
               Sample sample
-            </a>
-          </li>
-          <li>
-            <a href="http://localhost:8080//how-tos/diagrams.html" class="padding">
-              Diagrams
             </a>
           </li>
         </ul>
@@ -154,7 +144,30 @@
             </a>
           </span>
           <h1>FSharpColors</h1>
-<p>FSharpColors is a lightweight utility library to create and manipulate colors.</p>
+<p>FSharpColors is a lightweight utility library to create and manipulate colors completely written in F#.</p>
+<pre class="fssnip highlighted"><code class="language-fsharp"><span class="hljs-keyword">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="hljs-function">FSharpColors</span>
+
+<span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="hljs-type">Color</span><span class="hljs-keyword">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="hljs-function">fromRGB</span> <span class="hljs-number">13</span> <span class="hljs-number">3</span> <span class="hljs-number">7</span>
+</code></pre>
+<p>Here is the current feature set:</p>
+<ul>
+<li>
+Converting bewteen
+<ul>
+<li>(a) r g b values</li>
+<li>"(a)rgb(...)" strings</li>
+<li>c m y k values</li>
+<li>"cmyk(...)" strings</li>
+<li>W3C conform color keywords (such as "cyan" for rgb(0,255,255))</li>
+<li>hex strings (also with 0x prefix)</li>
+<li>webcolors (hex strings without 0x and w # prefix)</li>
+</ul>
+</li>
+<li>DU abstraction of all W3C conform color keywords</li>
+</ul>
+<div class="tip" id="fs1">namespace FSharpColors</div>
+<div class="tip" id="fs2">type Color =<br />&#160;&#160;{ A: byte<br />&#160;&#160;&#160;&#160;R: byte<br />&#160;&#160;&#160;&#160;G: byte<br />&#160;&#160;&#160;&#160;B: byte }<br />&#160;&#160;&#160;&#160;static member fromARGB : a:int -&gt; r:int -&gt; g:int -&gt; b:int -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromARGBString : argbString:string -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromCMYK : c:float -&gt; m:float -&gt; y:float -&gt; k:float -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromCMYKString : cmykString:string -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromColorKeyword : keyWord:string -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromHexString : s:string -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromRGB : r:int -&gt; g:int -&gt; b:int -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromRGBString : rgbString:string -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromStandardWebColor : swc:StandardWebColor -&gt; Color<br />&#160;&#160;&#160;&#160;static member fromWebColorString : s:string -&gt; Color<br />&#160;&#160;&#160;&#160;...</div>
+<div class="tip" id="fs3">static member Color.fromRGB : r:int -&gt; g:int -&gt; b:int -&gt; Color</div>
 
 
         </div>

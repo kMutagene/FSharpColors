@@ -3,6 +3,8 @@
 //http://www.niwa.nu/2013/05/math-behind-colorspace-conversions-rgb-hsl/
 /// Represents an ARGB (alpha, red, green, blue) color
 
+open System.Text.RegularExpressions
+
 module internal Hex =
     
     open System
@@ -217,6 +219,147 @@ type StandardWebColor =
     | Yellow                  
     | YellowGreen             
     
+    static member ofRGB (r:int) (g:int) (b:int) = 
+        match (r,g,b) with
+        | (240, 248, 255)   -> AliceBlue               
+        | (250, 235, 215)   -> AntiqueWhite            
+        | (127, 255, 212)   -> Aquamarine              
+        | (240, 255, 255)   -> Azure                   
+        | (245, 245, 220)   -> Beige                   
+        | (255, 228, 196)   -> Bisque                  
+        | ( 0, 0, 0)        -> Black                   
+        | (255, 235, 205)   -> BlanchedAlmond          
+        | ( 0, 0, 255)      -> Blue                    
+        | (138, 43, 226)    -> Blueviolet              
+        | (165, 42, 42)     -> Brown                   
+        | (222, 184, 135)   -> BurlyWood               
+        | ( 95, 158, 160)   -> CadetBlue               
+        | (127, 255, 0)     -> Chartreuse              
+        | (210, 105, 30)    -> Chocolate               
+        | (255, 127, 80)    -> Coral                   
+        | (100, 149, 237)   -> CornflowerBlue          
+        | (255, 248, 220)   -> CornSilk                
+        | (220, 20, 60)     -> Crimson                 
+        | ( 0, 255, 255)    -> Cyan                    
+        | ( 0, 0, 139)      -> DarkBlue                
+        | ( 0, 139, 139)    -> DarkCyan                
+        | (184, 134, 11)    -> DarkGoldenRod           
+        | ( 0, 100, 0)      -> DarkGreen               
+        | (169, 169, 169)   -> DarkGray                
+        | (189, 183, 107)   -> DarkKhaki               
+        | (139, 0, 139)     -> DarkMagenta             
+        | ( 85, 107, 47)    -> Darkolivegreen          
+        | (255, 140, 0)     -> DarkOrange              
+        | (153, 50, 204)    -> DarkOrchid              
+        | (139, 0, 0)       -> DarkRed                 
+        | (233, 150, 122)   -> DarkSalmon              
+        | (143, 188, 143)   -> DarkSeaGreen            
+        | ( 72, 61, 139)    -> DarkSlateBlue           
+        | ( 47, 79, 79)     -> DarkSlateGray           
+        | ( 0, 206, 209)    -> DarkTurquoise           
+        | (148, 0, 211)     -> DarkViolet              
+        | (255, 20, 147)    -> DeepPink                
+        | ( 0, 191, 255)    -> DeepSkyBlue             
+        | (105, 105, 105)   -> DimGray                 
+        | ( 30, 144, 255)   -> DodgerBlue              
+        | (178, 34, 34)     -> FireBrick               
+        | (255, 250, 240)   -> FloralWhite             
+        | ( 34, 139, 34)    -> ForestGreen             
+        | (220, 220, 220)   -> Gainsboro               
+        | (248, 248, 255)   -> GhostWhite              
+        | (255, 215, 0)     -> Gold                    
+        | (218, 165, 32)    -> GoldenRod               
+        | (128, 128, 128)   -> Gray                    
+        | ( 0, 128, 0)      -> Green                   
+        | (173, 255, 47)    -> GreenYellow             
+        | (240, 255, 240)   -> Honeydew                
+        | (255, 105, 180)   -> Hotpink                 
+        | (205, 92, 92)     -> IndianRed               
+        | ( 75, 0, 130)     -> Indigo                  
+        | (255, 255, 240)   -> Ivory                   
+        | (240, 230, 140)   -> Khaki                   
+        | (230, 230, 250)   -> Lavender                
+        | (255, 240, 245)   -> LavenderBlush           
+        | (124, 252, 0)     -> LawnGreen               
+        | (255, 250, 205)   -> LemonChiffon            
+        | (173, 216, 230)   -> LightBlue               
+        | (240, 128, 128)   -> LightCoral              
+        | (224, 255, 255)   -> LightCyan               
+        | (250, 250, 210)   -> LightGoldenRodYellow    
+        | (211, 211, 211)   -> LightGray               
+        | (144, 238, 144)   -> LightGreen              
+        | (255, 182, 193)   -> LightPink               
+        | (255, 160, 122)   -> LightAalmon             
+        | ( 32, 178, 170)   -> LightAeaGreen           
+        | (135, 206, 250)   -> LightAkyBlue            
+        | (119, 136, 153)   -> LightAlateGray          
+        | (176, 196, 222)   -> LightSteelBlue          
+        | (255, 255, 224)   -> LightYellow             
+        | ( 0, 255, 0)      -> Lime                    
+        | ( 50, 205, 50)    -> Limegreen               
+        | (250, 240, 230)   -> Linen                   
+        | (255, 0, 255)     -> Magenta                 
+        | (128, 0, 0)       -> Maroon                  
+        | (102, 205, 170)   -> MediumAquamarine        
+        | ( 0, 0, 205)      -> MediumBlue              
+        | (186, 85, 211)    -> MediumOrchid            
+        | (147, 112, 219)   -> MediumPurple            
+        | ( 60, 179, 113)   -> MediumSeaGreen          
+        | (123, 104, 238)   -> MediumSlateBlue         
+        | ( 0, 250, 154)    -> MediumSpringGreen       
+        | ( 72, 209, 204)   -> MediumTurquoise         
+        | (199, 21, 133)    -> MediumVioletRed         
+        | ( 25, 25, 112)    -> MidnightBlue            
+        | (245, 255, 250)   -> MintCream               
+        | (255, 228, 225)   -> MistyRose               
+        | (255, 228, 181)   -> Moccasin                
+        | (255, 222, 173)   -> NavajoWhite             
+        | ( 0, 0, 128)      -> Navy                    
+        | (253, 245, 230)   -> OldLace                 
+        | (128, 128, 0)     -> Olive                   
+        | (107, 142, 35)    -> OliveDrab               
+        | (255, 165, 0)     -> Orange                  
+        | (255, 69, 0)      -> OrangeRed               
+        | (218, 112, 214)   -> Orchid                  
+        | (238, 232, 170)   -> PaleGoldenRod           
+        | (152, 251, 152)   -> PaleGreen               
+        | (175, 238, 238)   -> PaleTurquoise           
+        | (219, 112, 147)   -> PaleVioletRed           
+        | (255, 239, 213)   -> PapayaWhip              
+        | (255, 218, 185)   -> PeachPuff               
+        | (205, 133, 63)    -> Peru                    
+        | (255, 192, 203)   -> Pink                    
+        | (221, 160, 221)   -> Plum                    
+        | (176, 224, 230)   -> PowderBlue              
+        | (128, 0, 128)     -> Purple                  
+        | (255, 0, 0)       -> Red                     
+        | (188, 143, 143)   -> RosyBrown               
+        | ( 65, 105, 225)   -> RoyalBlue               
+        | (139, 69, 19)     -> SaddleBrown             
+        | (250, 128, 114)   -> Salmon                  
+        | (244, 164, 96)    -> SandyBrown              
+        | ( 46, 139, 87)    -> SeaGreen                
+        | (255, 245, 238)   -> SeaShell                
+        | (160, 82, 45)     -> Sienna                  
+        | (192, 192, 192)   -> Silver                  
+        | (135, 206, 235)   -> Skyblue                 
+        | (106, 90, 205)    -> SlateBlue               
+        | (112, 128, 144)   -> SlateGray               
+        | (255, 250, 250)   -> Snow                    
+        | ( 0, 255, 127)    -> SpringGreen             
+        | ( 70, 130, 180)   -> SteelBlue               
+        | (210, 180, 140)   -> Tan                     
+        | ( 0, 128, 128)    -> Teal                    
+        | (216, 191, 216)   -> Thistle                 
+        | (255, 99, 71)     -> Tomato                  
+        | ( 64, 224, 208)   -> Turquoise               
+        | (238, 130, 238)   -> Violet                  
+        | (245, 222, 179)   -> Wheat                   
+        | (255, 255, 255)   -> White                   
+        | (245, 245, 245)   -> WhiteSmoke              
+        | (255, 255, 0)     -> Yellow                  
+        | (154, 205, 50)    -> YellowGreen             
+        | _ -> failwith "input color has no standard color keyword"
 
     static member toRGB = function
         | AliceBlue               -> (240, 248, 255)
@@ -529,6 +672,9 @@ type Color = {
     B : byte
     }
 with
+
+//==================================================================================================================
+//Utility
     /// Returns the highest color component of the given color
     static member getMaxRGB (c:Color) =
         let r,g,b = R c.R,G c.G,B c.B
@@ -538,36 +684,6 @@ with
     static member getMinRGB c =
         let r,g,b = R c.R,G c.G,B c.B
         min r g |> min b
-        
-    /// Creates a Color structure from the four ARGB component (alpha, red, green, and blue) values.
-    static member fromArgb a r g b =
-        let f v =
-            if v < 0 || v > 255 then 
-                failwithf "Value for component needs to be between 0 and 255."
-            else
-                byte v
-        {A= f a; R = f r; G = f g; B = f b}
-
-    /// Creates a Color structure from the specified color values (red, green, and blue).
-    /// The alpha value is implicitly 255 (fully opaque). 
-    static member fromRgb r g b =
-        Color.fromArgb 255 r g b
-
-    /// Creates a Color structure from the given W3C conform standard web color type.
-    static member fromStandardWebColor (swc:StandardWebColor) =
-        swc
-        |> StandardWebColor.toRGB
-        |> fun (r,g,b) -> Color.fromRgb r g b
-
-    /// Creates a Color structure from the given W3C conform standard web color keyword .
-    static member fromColorKeyword (keyWord:string) =
-        keyWord
-        |> StandardWebColor.ofKeyWord
-        |> StandardWebColor.toRGB
-        |> fun (r,g,b) -> Color.fromRgb r g b
-
-    //    /// Gets the hue-saturation-brightness (HSB) brightness value for this Color structure.
-    //    let getBrightness = ()
 
     /// Gets the hue-saturation-brightness (HSB) hue value, in degrees, for this Color structure.
     static member getHue c =
@@ -578,85 +694,198 @@ with
         | B b -> 4.0 + float (c.R - c.G) / float (b - min)
         | _   -> failwithf "" // can't be
 
-
     /// Gets the hue-saturation-brightness (HSB) saturation value for this Color structure.
     static member getSaturation col =
         let minimum = Color.getMinRGB col
         let maximum = Color.getMaxRGB col
         float (ColorComponent.getComponentValue minimum + ColorComponent.getComponentValue maximum) / 2.
         |> round
-           
+
+//==================================================================================================================
+//Parsing
+    /// Creates a Color structure from the specified color values (red, green, and blue).
+    /// The alpha value is implicitly 255 (fully opaque). 
+    static member fromRGB r g b =
+        Color.fromARGB 255 r g b
+
+    /// Creates a Color structure from the specified argb encoding string (e.g. "argb(255,255,255,255)").
+    static member fromRGBString (rgbString:string) =
+        let rgbRegex = Regex("rgb\((?<red>\d{1,3}?),(?<green>\d{1,3}?),(?<blue>\d{1,3}?)\)")
+        let rgbMatch = rgbRegex.Match(rgbString)
+        let r,g,b =
+            rgbMatch.Groups.Item("red")  .Value |> int ,
+            rgbMatch.Groups.Item("green").Value |> int ,
+            rgbMatch.Groups.Item("blue") .Value |> int
+        Color.fromRGB r g b
+
+    /// Creates a Color structure from the four ARGB component (alpha, red, green, and blue) values.
+    static member fromARGB a r g b =
+        let f v =
+            if v < 0 || v > 255 then 
+                failwithf "Value for component needs to be between 0 and 255."
+            else
+                byte v
+        {A= f a; R = f r; G = f g; B = f b}
+
+    /// Creates a Color structure from the specified argb encoding string (e.g. "argb(255,255,255,255)").
+    static member fromARGBString (argbString:string) =
+        let argbRegex = Regex("argb\((?<alpha>\d{1,3}?),(?<red>\d{1,3}?),(?<green>\d{1,3}?),(?<blue>\d{1,3}?)\)")
+        let argbMatch = argbRegex.Match(argbString)
+        let a,r,g,b =
+            argbMatch.Groups.Item("alpha").Value |> int ,
+            argbMatch.Groups.Item("red")  .Value |> int ,
+            argbMatch.Groups.Item("green").Value |> int ,
+            argbMatch.Groups.Item("blue") .Value |> int
+        Color.fromARGB a r g b
+
+    /// Gets color from web color (#FFFFFF)
+    static member fromWebColorString (s:string) =
+        let s' = s.TrimStart([|'#'|])
+        match (Hex.decode s') with
+        | [|r;g;b|]  -> Color.fromRGB (int r) (int g) (int b)
+        | _          -> failwithf "Invalid hex color format"
+
+    /// Creates a Color structure from the given W3C conform standard web color type.
+    static member fromStandardWebColor (swc:StandardWebColor) =
+        swc
+        |> StandardWebColor.toRGB
+        |> fun (r,g,b) -> Color.fromRGB r g b
+
+    /// Creates a Color structure from the given W3C conform standard web color keyword .
+    static member fromColorKeyword (keyWord:string) =
+        keyWord
+        |> StandardWebColor.ofKeyWord
+        |> StandardWebColor.toRGB
+        |> fun (r,g,b) -> Color.fromRGB r g b
+
+    /// Gets color from hex representataion (FFFFFF) or (0xFFFFFF)
+    static member fromHexString (s:string) =
+        match (Hex.decode s) with
+        | [|r;g;b|]  -> Color.fromRGB (int r) (int g) (int b)
+        | _          -> failwithf "Invalid hex color format"
+
+    static member fromCMYK (c:float) (m:float) (y:float) (k:float) =
+        let r = 255. * (1. - c) * (1. - k)
+        let g = 255. * (1. - m) * (1. - k)
+        let b = 255. * (1. - y) * (1. - k)
+        Color.fromRGB (int r) (int g) (int b)
+
+    static member fromCMYKString (cmykString:string) =
+        let cmykRegex = Regex("cmyk\((?<cyan>\d{1,3}?)%,(?<magenta>\d{1,3}?)%,(?<yellow>\d{1,3}?)%,(?<key>\d{1,3}?)%\)")
+        let cmykMatch = cmykRegex.Match(cmykString)
+        let c,m,y,k =
+            cmykMatch.Groups.Item("cyan")   .Value |> float |> (fun x -> x / 100.),
+            cmykMatch.Groups.Item("magenta").Value |> float |> (fun x -> x / 100.),
+            cmykMatch.Groups.Item("yellow") .Value |> float |> (fun x -> x / 100.),
+            cmykMatch.Groups.Item("key")    .Value |> float |> (fun x -> x / 100.)
+       
+        Color.fromCMYK c m y k
+
+    ///buggy, values are off 1 to 2
+    //static member fromHSL (h:int) (s:float) (l: float) =
+    //    let c = (1. - abs(2. * l - 1.)) * s
+    //    let h' = float h / 60.
+    //    let x = c * (1. - abs((h' % 2.) - 1.))
+    //    let m = l - (c / 2.)
+
+    //    let r', g', b' =
+    //        match h with
+    //        | h when (0   <= h && h <= 60 ) -> c,x,0.
+    //        | h when (60  <= h && h <= 120) -> x,c,0.
+    //        | h when (120 <= h && h <= 180) -> 0.,c,x
+    //        | h when (180 <= h && h <= 240) -> 0.,x,c
+    //        | h when (240 <= h && h <= 300) -> x,0.,c
+    //        | h when (300 <= h && h <= 360) -> c,0.,x
+    //        | _ -> 0.,0.,0.
+
+    //    int ((r' + m) * 255.),
+    //    int ((g' + m) * 255.),
+    //    int ((b' + m) * 255.)
+        
+    //    /// Gets the hue-saturation-brightness (HSB) brightness value for this Color structure.
+    //    let getBrightness = ()
+
+//==================================================================================================================
+//"Writing"
+    /// Converts this Color structure to a human-readable string.
+    static member toString c =
+        let a,r,g,b = Color.toARGB c
+        sprintf "{Alpha: %i Red: %i Green: %i Blue: %i}" a r g b
+
+    static member toRGB c =
+        (int c.R, int c.B, int c.G)
+
+    static member toRGBString (c:Color) =
+        sprintf "rgb(%i,%i,%i)" c.R c.B c.G
+
     /// Gets the 32-bit ARGB value of this Color structure.
-    static member toArgb c =
-        (int c.A, int c.R, int c.G, int c.B)
+    static member toARGB c =
+        (int c.A, int c.R, int c.B, int c.G)
     
+    static member toARGBString (c:Color) =
+        sprintf "argb(%i,%i,%i,%i)" c.A c.R c.B c.G
+
     /// Gets the hex representataion (FFFFFF) of a color (with valid prefix "0xFFFFFF")
-    static member toHex prefix (c:Color) =
+    static member toHexString prefix (c:Color) =
         let prefix' = if prefix then "0x" else ""
         Hex.encode prefix' [|c.R;c.G;c.B|]
 
-    /// Gets color from hex representataion (FFFFFF) or (0xFFFFFF)
-    static member fromHex (s:string) =
-        match (Hex.decode s) with
-        | [|r;g;b|]  -> Color.fromRgb (int r) (int g) (int b)
-        | _          -> failwithf "Invalid hex color format"
-
     /// Gets the web color representataion (#FFFFFF)
-    static member toWebColor c =        
+    static member toWebColorString c =        
         Hex.encode "#" [|c.R;c.G;c.B|]                
 
-    /// Gets color from web color (#FFFFFF)
-    static member fromWebColor (s:string) =
-        let s' = s.TrimStart([|'#'|])
-        match (Hex.decode s') with
-        | [|r;g;b|]  -> Color.fromRgb (int r) (int g) (int b)
-        | _          -> failwithf "Invalid hex color format"
+    static member toCMYK (c:Color) =
+        let r',g',b' = (float c.R / 255.) , (float c.G / 255.), (float c.B / 255.)
+
+        let k = 1. - max (max r' g') b'
 
 
-    /// Converts this Color structure to a human-readable string.
-    static member toString c =
-        let a,r,g,b = Color.toArgb c
-        sprintf "{Alpha: %i Red: %i Green: %i Blue: %i}" a r g b
+        let c = if k = 1. then 0. else (1. - r' - k) / (1. - k)
+        let m = if k = 1. then 0. else (1. - g' - k) / (1. - k)
+        let y = if k = 1. then 0. else (1. - b' - k) / (1. - k)
 
+        c,m,y,k
 
-
+    static member toCMYKString (c:Color) =
+        let c,m,y,k = Color.toCMYK c
+        sprintf "cmyk(%.0f%%,%.0f%%,%.0f%%,%.0f%%)" (c * 100.) (m * 100.) (y * 100.) (k * 100.)
 
 // http://graphicdesign.stackexchange.com/questions/3682/where-can-i-find-a-large-palette-set-of-contrasting-colors-for-coloring-many-d
 module Table =    
 
-    let black       = Color.fromRgb   0   0   0                
-    let blackLite   = Color.fromRgb  89  89  89 // 35% lighter
-    let white       = Color.fromRgb 255 255 255
+    let black       = Color.fromRGB   0   0   0                
+    let blackLite   = Color.fromRGB  89  89  89 // 35% lighter
+    let white       = Color.fromRGB 255 255 255
 
     /// Color palette from Microsoft office 2016
     module Office = 
         
         // blue
-        let blue        = Color.fromRgb  65 113 156        
-        let lightBlue   = Color.fromRgb 189 215 238
-        let darkBlue    = Color.fromRgb  68 114 196
+        let blue        = Color.fromRGB  65 113 156        
+        let lightBlue   = Color.fromRGB 189 215 238
+        let darkBlue    = Color.fromRGB  68 114 196
                         
         // red           
-        let red         = Color.fromRgb 241  90  96  
-        let lightRed    = Color.fromRgb 252 212 214
+        let red         = Color.fromRGB 241  90  96  
+        let lightRed    = Color.fromRGB 252 212 214
 
         // orange           
-        let orange      = Color.fromRgb 237 125  49
-        let lightOrange = Color.fromRgb 248 203 173
+        let orange      = Color.fromRGB 237 125  49
+        let lightOrange = Color.fromRGB 248 203 173
                                                                   
         // yellow        
-        let yellow      = Color.fromRgb 255 217 102
-        let lightYellow = Color.fromRgb 255 230 153
-        let darkYellow  = Color.fromRgb 255 192   0
+        let yellow      = Color.fromRGB 255 217 102
+        let lightYellow = Color.fromRGB 255 230 153
+        let darkYellow  = Color.fromRGB 255 192   0
                          
         // green         
-        let green       = Color.fromRgb 122 195 106
-        let lightGreen  = Color.fromRgb 197 224 180
-        let darkGreen   = Color.fromRgb 112 173  71
+        let green       = Color.fromRGB 122 195 106
+        let lightGreen  = Color.fromRGB 197 224 180
+        let darkGreen   = Color.fromRGB 112 173  71
 
         // grey         
-        let grey        = Color.fromRgb 165 165 165
-        let lightGrey   = Color.fromRgb 217 217 217
+        let grey        = Color.fromRGB 165 165 165
+        let lightGrey   = Color.fromRGB 217 217 217
 
     // From publication: Escaping RGBland: Selecting Colors for Statistical Graphics
     // http://epub.wu.ac.at/1692/1/document.pdf
