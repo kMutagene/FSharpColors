@@ -1,17 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.36
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F1C3697A-14C7-44F4-BB2C-8F2874DD3C7D}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpColors", "src\FSharpColors\FSharpColors.fsproj", "{2B2AF76F-D332-43DF-81EA-B5410493FA8B}"
-EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpColors.Cli", "src\FSharpColors.Cli\FSharpColors.Cli.fsproj", "{FB0DA14A-D15A-49F2-B693-DEFE8D67057B}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FSharpColors", "src\FSharpColors\FSharpColors.fsproj", "{2B2AF76F-D332-43DF-81EA-B5410493FA8B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DDCA53F5-9626-4C73-9BDA-21A28CD98993}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpColors.UnitTests", "tests\FSharpColors.UnitTests\FSharpColors.UnitTests.fsproj", "{04410448-2C89-48B9-AB7A-54FAC8CBDB0C}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FSharpColors.UnitTests", "tests\FSharpColors.UnitTests\FSharpColors.UnitTests.fsproj", "{04410448-2C89-48B9-AB7A-54FAC8CBDB0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2B2AF76F-D332-43DF-81EA-B5410493FA8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -38,18 +33,6 @@ Global
 		{2B2AF76F-D332-43DF-81EA-B5410493FA8B}.Release|x64.Build.0 = Release|Any CPU
 		{2B2AF76F-D332-43DF-81EA-B5410493FA8B}.Release|x86.ActiveCfg = Release|Any CPU
 		{2B2AF76F-D332-43DF-81EA-B5410493FA8B}.Release|x86.Build.0 = Release|Any CPU
-		{FB0DA14A-D15A-49F2-B693-DEFE8D67057B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB0DA14A-D15A-49F2-B693-DEFE8D67057B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB0DA14A-D15A-49F2-B693-DEFE8D67057B}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{FB0DA14A-D15A-49F2-B693-DEFE8D67057B}.Debug|x64.Build.0 = Debug|Any CPU
-		{FB0DA14A-D15A-49F2-B693-DEFE8D67057B}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{FB0DA14A-D15A-49F2-B693-DEFE8D67057B}.Debug|x86.Build.0 = Debug|Any CPU
-		{FB0DA14A-D15A-49F2-B693-DEFE8D67057B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB0DA14A-D15A-49F2-B693-DEFE8D67057B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB0DA14A-D15A-49F2-B693-DEFE8D67057B}.Release|x64.ActiveCfg = Release|Any CPU
-		{FB0DA14A-D15A-49F2-B693-DEFE8D67057B}.Release|x64.Build.0 = Release|Any CPU
-		{FB0DA14A-D15A-49F2-B693-DEFE8D67057B}.Release|x86.ActiveCfg = Release|Any CPU
-		{FB0DA14A-D15A-49F2-B693-DEFE8D67057B}.Release|x86.Build.0 = Release|Any CPU
 		{04410448-2C89-48B9-AB7A-54FAC8CBDB0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{04410448-2C89-48B9-AB7A-54FAC8CBDB0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04410448-2C89-48B9-AB7A-54FAC8CBDB0C}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -63,9 +46,14 @@ Global
 		{04410448-2C89-48B9-AB7A-54FAC8CBDB0C}.Release|x86.ActiveCfg = Release|Any CPU
 		{04410448-2C89-48B9-AB7A-54FAC8CBDB0C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2B2AF76F-D332-43DF-81EA-B5410493FA8B} = {F1C3697A-14C7-44F4-BB2C-8F2874DD3C7D}
-		{FB0DA14A-D15A-49F2-B693-DEFE8D67057B} = {F1C3697A-14C7-44F4-BB2C-8F2874DD3C7D}
 		{04410448-2C89-48B9-AB7A-54FAC8CBDB0C} = {DDCA53F5-9626-4C73-9BDA-21A28CD98993}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A53D065E-8300-4B7D-90BF-B423B85932F6}
 	EndGlobalSection
 EndGlobal
