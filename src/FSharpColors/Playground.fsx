@@ -28,6 +28,11 @@ Color.fromColorKeyword "cyan"
 60.4123 % 2.
 
 
+// ---
+// ColorScale/-Gradiant stuff:
+// ---
+
+
 type ColorScale = {ColorPositions : (Color * float) []}
 
 
@@ -55,7 +60,7 @@ let createColorScaleEquallySpaced (colors : Color []) =
         {ColorPositions = Array.zip colors positions}
 
 
-let getColorAtPos colorScale pos =
+let getColorAtPos colorScale pos = // care: does not work properly
     if pos > 100. || pos < 0. then failwith "ERROR: Position must be between 0 and 100."
     let posMatchedColor = Array.tryFind (fun (c,p) -> p = pos) colorScale.ColorPositions // is `pos` actually on the position of one of the given colors?
     if posMatchedColor.IsSome then fst posMatchedColor.Value
@@ -76,12 +81,13 @@ let getColorAtPos colorScale pos =
         let b2 = float (fst c2).B
         let p1 = snd c1
         let p2 = snd c2
-        let calcNewV v1 v2 p v1p v2p = System.Math.Round((v2 + (v1 - v2) * (p / (v2p - v1p)) : float), 0) |> int
+        let calcNewV v1 v2 p v1p v2p = System.Math.Round((v2 + (v1 - v2) * (p / (v2p - v1p)) : float), 0) |> int // calculate new color value appropriate to position distance
         let aFin = calcNewV a1 a2 pos p1 p2
         let rFin = calcNewV r1 r2 pos p1 p2
         let gFin = calcNewV g1 g2 pos p1 p2
         let bFin = calcNewV b1 b2 pos p1 p2
         Color.fromARGB aFin rFin gFin bFin
+
 
 
 type internal ColorGradient(colors, ?positions) = // write overload with ?(colors * positions)
@@ -95,3 +101,44 @@ type internal ColorGradient(colors, ?positions) = // write overload with ?(color
         else createColorScaleEquallySpaced colors
 
     member this.GetColorAt(pos) = getColorAtPos this.ColorScale pos
+
+let pureRed = Color.fromRGB 255 0 0
+let pureGreen = Color.fromRGB 0 255 0
+let pureYellow = Color.fromRGB 255 255 0
+
+//let testColorScale = createColorScale [|pureRed; pureYellow; pureGreen|] [|0.; 50.; 100.|]
+let testColorScale = createColorScaleEquallySpaced [|pureRed; pureYellow; pureGreen|]
+
+let colorsFromScale = // meh
+    Array.init 11 (
+        fun i -> float i * 100. / 10.
+    )
+    |> Array.map (getColorAtPos testColorScale)
+
+colorsFromScale.[1]
+
+let testColorScale2 = createColorScaleEquallySpaced [|pureRed; pureYellow|]
+
+let colorsFromScale2 = // more meh
+    Array.init 7 (fun i -> float i * 100. / 6.)
+    |> Array.map (getColorAtPos testColorScale)
+
+let bruteAndUgly = // TO DO: rework this into the getColorAtPos function
+    let count = 7 // maybe better / more elegant: add start color and then use the same function for the rest
+    let maxNum = float count - 1.
+    let count2 = 4
+    let maxNum2 = float count2
+    [
+        yield!
+            Array.init count (
+                fun i -> 
+                    (255, (System.Math.Round(255. / maxNum * float i, 0) |> int), 0)
+                    |||> Color.fromRGB
+            )
+        yield!
+            Array.init count2 (
+                fun i ->
+                    ((System.Math.Round(255. - 255. / maxNum2 * float (i + 1), 0) |> int), 255, 0)
+                    |||> Color.fromRGB
+            )
+    ]
